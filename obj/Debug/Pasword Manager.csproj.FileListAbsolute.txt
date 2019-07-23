@@ -1,0 +1,15 @@
+G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Pasword Manager.exe.config
+G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Pasword Manager.exe
+G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Pasword Manager.pdb
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csprojAssemblyReference.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\MainWindow.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\App.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager_MarkupCompile.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager_MarkupCompile.lref
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\MainWindow.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.g.resources
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword_Manager.Properties.Resources.resources
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csproj.GenerateResource.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.exe
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.pdb

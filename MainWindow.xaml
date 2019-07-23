@@ -1,0 +1,43 @@
+﻿<Window x:Class="Pasword_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pasword_Manager"
+        mc:Ignorable="d"
+        Title="Password Manager" Height="900" Width="1600" Background="DarkSlateBlue">
+
+    <Grid>
+        <Grid x:Name="gridHome" Visibility="Visible">
+            <Button x:Name="BtnNewEntity" Content="New Entity" Width="200" Height="200" HorizontalAlignment="Left" Click="BtnNewEntity_Click"></Button>
+            <Button x:Name="BtnHistory" Content="History" Width="200" Height="200" HorizontalAlignment="Center" Click="BtnHistory_Click"></Button>
+            <Button x:Name="BtnOptions" Content="Options" Width="200" Height="200" HorizontalAlignment="Right" Click="BtnOptions_Click"></Button>
+            <Button x:Name="BtnSavedEntities" Content="Saved Entities" Margin="0,1,0,0" Click="BtnSavedEntities_Click" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Button>
+        </Grid>
+
+        <Grid x:Name="gridNewEntity" Visibility="Collapsed">
+            <Label Content="Name of the site"></Label>
+            <Button x:Name="ReturnHomeNE" Content="GoBack" Click="BtnReturnHomeNE_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Height="200"></Button>
+
+        </Grid>
+
+        <Grid x:Name="gridHistory" Visibility="Collapsed">
+            <Label Content="History of mongolian empire"></Label>
+            <Button x:Name="BtnReturnHomeHIST" Content="GoBack" Click="BtnReturnHomeHIST_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Height="200"></Button>
+
+        </Grid>
+
+        <Grid x:Name="gridOptions" Visibility="Collapsed">
+            <Label Content="Options"></Label>
+            <Button x:Name="BtnReturnHomeOPT" Content="GoBack" Click="BtnReturnHomeOPT_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Height="200"></Button>
+
+        </Grid>
+
+        <Grid x:Name="gridSavedEntities" Visibility="Collapsed">
+            <Label Content="Entities that had been previously stored"></Label>
+            <Button x:Name="BtnReturnHomeSE" Content="GoBack" Click="BtnReturnHomeSE_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Height="200"></Button>
+        </Grid>
+    </Grid>
+
+
+</Window>
