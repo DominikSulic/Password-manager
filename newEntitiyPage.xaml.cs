@@ -16,25 +16,18 @@ using System.Windows.Shapes;
 namespace Pasword_Manager
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for newEntitiyPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class newEntitiyPage : Page
     {
-        public MainWindow()
+        public newEntitiyPage()
         {
             InitializeComponent();
-
-            loginPage login = new loginPage();
-            mainFrame.NavigationService.Navigate(login);
-
-            //treba slozit init mainPagea preko loginPagea
-           // mainFrame.NavigationService.Navigate(home);
-
-
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-
+        }
     }
-    
 }

@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace Pasword_Manager
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for optionsPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class optionsPage : Page
     {
-        public MainWindow()
+        public optionsPage()
         {
             InitializeComponent();
-
-            loginPage login = new loginPage();
-            mainFrame.NavigationService.Navigate(login);
-
-            //treba slozit init mainPagea preko loginPagea
-           // mainFrame.NavigationService.Navigate(home);
-
-
         }
-
-
-
     }
-    
 }
