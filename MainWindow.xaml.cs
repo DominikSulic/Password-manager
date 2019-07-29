@@ -27,8 +27,6 @@ namespace Pasword_Manager
             loginPage login = new loginPage();
             mainFrame.NavigationService.Navigate(login);
 
-            //treba slozit init mainPagea preko loginPagea
-           // mainFrame.NavigationService.Navigate(home);
 
 
         }

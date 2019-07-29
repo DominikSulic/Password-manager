@@ -9,10 +9,10 @@
       Title="mainPage">
 
     <Grid>
-        <Button x:Name="BtnNewEntity" Content="Add New Entity" Width="150" Height="75" Margin="206,116,444,259" Click="BtnNewEntity_Click"></Button>
-        <Button x:Name="BtnOptions" Content="Options" Width="150" Height="75" Margin="456,252,194,123" Click="BtnOptions_Click"></Button>
-        <Button x:Name="BtnHistory" Content="History" Width="150" Height="75" Margin="456,116,194,259" Click="BtnHistory_Click"></Button>
-        <Button x:Name="BtnSavedEntities" Content="Saved Entities" Width="150" Height="75" Margin="206,252,444,123" Click="BtnSavedEntities_Click"></Button>
+        <Button x:Name="btnNewEntity" Content="Add New Entity" Width="150" Height="75" Margin="206,116,444,259" Click="BtnNewEntity_Click"></Button>
+        <Button x:Name="btnOptions" Content="Options" Width="150" Height="75" Margin="456,252,194,123" Click="BtnOptions_Click"></Button>
+        <Button x:Name="btnHistory" Content="History" Width="150" Height="75" Margin="456,116,194,259" Click="BtnHistory_Click"></Button>
+        <Button x:Name="btnSavedEntities" Content="Saved Entities" Width="150" Height="75" Margin="206,252,444,123" Click="BtnSavedEntities_Click"></Button>
 
     </Grid>
 </Page>

@@ -9,18 +9,22 @@
       Title="newEntitiyPage">
 
     <Grid>
-        <Label Content="Enter your user name" VerticalAlignment="Top" Margin="50,70,550,200" Foreground="Cyan"></Label>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="50,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Enter your user name" VerticalAlignment="Top" Margin="50,30,550,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="50,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
 
-        <Label Content="Enter your password" VerticalAlignment="Top" Margin="50,150,550,200" Foreground="Cyan"></Label>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="50,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Enter your password" VerticalAlignment="Top" Margin="50,249,550,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtPasswordBox" HorizontalAlignment="Left" Height="23" Margin="50,291,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
 
-        <Label Content="Enter your e-mail address" VerticalAlignment="Top" Margin="50,236,550,0" Foreground="Cyan"></Label>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="50,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Enter your e-mail address" VerticalAlignment="Top" Margin="50,177,550,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="47,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267" RenderTransformOrigin="0.5,0.5"/>
 
-        <Button Content="Generate a password" HorizontalAlignment="Left" Margin="50,303,0,0" VerticalAlignment="Top" Width="121"/>
-        <Button Content="Save Entity" HorizontalAlignment="Left" Margin="189,378,0,0" VerticalAlignment="Top" Width="128" Height="34"/>
-        
+        <Label Content="Enter the site name" VerticalAlignment="Top" Margin="50,106,550,0" Foreground="Cyan"/>
+        <TextBox x:Name="txtSiteName" HorizontalAlignment="Left" Height="23" Margin="50,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+
+
+        <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Left" Margin="50,332,0,0" VerticalAlignment="Top" Width="121" Click="btnGeneratePassword_Click"/>
+        <Button x:Name="btnSaveEntity" Content="Save an Entity" HorizontalAlignment="Left" Margin="189,378,0,0" VerticalAlignment="Top" Width="128" Height="34" Click="btnSaveEntity_Click"/>
+
         <ListBox HorizontalAlignment="Left" Height="208" Margin="414,204,0,0" VerticalAlignment="Top" Width="353"/>
 
     </Grid>

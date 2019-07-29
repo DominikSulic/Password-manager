@@ -25,3 +25,6 @@ G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.exe
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.pdb
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\loginPage.g.cs
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\loginPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Newtonsoft.Json.dll
+G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Newtonsoft.Json.xml
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csproj.CopyComplete
