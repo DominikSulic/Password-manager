@@ -1,4 +1,4 @@
-﻿<Page x:Class="Pasword_Manager.newEntitiyPage"
+﻿<Page x:Class="Pasword_Manager.NewEntityPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -19,7 +19,7 @@
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="47,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267" RenderTransformOrigin="0.5,0.5"/>
 
         <Label Content="Enter the site name" VerticalAlignment="Top" Margin="50,106,550,0" Foreground="Cyan"/>
-        <TextBox x:Name="txtSiteName" HorizontalAlignment="Left" Height="23" Margin="50,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <TextBox x:Name="txtEntityName" HorizontalAlignment="Left" Height="23" Margin="50,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
 
 
         <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Left" Margin="50,332,0,0" VerticalAlignment="Top" Width="121" Click="btnGeneratePassword_Click"/>

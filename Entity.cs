@@ -8,7 +8,7 @@ namespace Pasword_Manager
 {
     class Entity
     {
-        public string siteName;
+        public string entityName;
         public string password;
         public string userName;
         public string email;

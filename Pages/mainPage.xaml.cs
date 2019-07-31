@@ -21,7 +21,7 @@ namespace Pasword_Manager
     public partial class mainPage : Page
     {
 
-        newEntitiyPage newEntity = new newEntitiyPage();
+        NewEntityPage newEntity = new NewEntityPage();
         optionsPage options = new optionsPage();
         historyPage history = new historyPage();
         savedEntitiesPage savedEntities = new savedEntitiesPage();

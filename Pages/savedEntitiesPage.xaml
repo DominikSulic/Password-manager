@@ -9,7 +9,9 @@
       Title="savedEntitiesPage">
 
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="220" Margin="220,131,0,0" VerticalAlignment="Top" Width="309"/>
+
+        <ListBox x:Name="lbEntities" HorizontalAlignment="Left" Height="370" Margin="32,38,0,0" VerticalAlignment="Top" Width="328"/>
+        <ListBox x:Name="lbPreview" HorizontalAlignment="Left" Height="370" Margin="432,38,0,0" VerticalAlignment="Top" Width="332"/>
 
     </Grid>
 </Page>

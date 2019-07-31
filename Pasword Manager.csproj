@@ -59,26 +59,27 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Category.cs" />
+    <Compile Include="CustomException.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="loginPage.xaml.cs">
+    <Compile Include="Pages\loginPage.xaml.cs">
       <DependentUpon>loginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="savedEntitiesPage.xaml.cs">
+    <Compile Include="Pages\savedEntitiesPage.xaml.cs">
       <DependentUpon>savedEntitiesPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="historyPage.xaml">
+    <Page Include="Pages\historyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="loginPage.xaml">
+    <Page Include="Pages\loginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="newEntitiyPage.xaml">
+    <Page Include="Pages\newEntitiyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="optionsPage.xaml">
+    <Page Include="Pages\optionsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,13 +95,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="historyPage.xaml.cs">
+    <Compile Include="Pages\historyPage.xaml.cs">
       <DependentUpon>historyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="newEntitiyPage.xaml.cs">
+    <Compile Include="Pages\newEntitiyPage.xaml.cs">
       <DependentUpon>newEntitiyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="optionsPage.xaml.cs">
+    <Compile Include="Pages\optionsPage.xaml.cs">
       <DependentUpon>optionsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\mainPage.xaml.cs">
@@ -110,7 +111,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="savedEntitiesPage.xaml">
+    <Page Include="Pages\savedEntitiesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

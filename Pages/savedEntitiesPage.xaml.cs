@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +26,31 @@ namespace Pasword_Manager
         public savedEntitiesPage()
         {
             InitializeComponent();
+
+
+            string path = Directory.GetCurrentDirectory();
+            path += "\\entities.txt";
+
+
+            if (File.Exists(path))
+            {
+
+                string[] lines = File.ReadAllLines(path);
+                foreach (string line in lines)
+                {
+                    string[] col = line.Split(new char[] { ';' });
+                    lbPreview.Items.Add(col[0]);
+                }
+
+
+            }
+            else
+            {
+                //            MessageBox 
+            }
+
         }
+
+
     }
 }
