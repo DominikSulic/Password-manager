@@ -82,19 +82,11 @@ namespace Pasword_Manager
 
                     if (File.Exists(path))
                     {
-                        TextWriter writer = null;
-                        var contentsToWriteToFile = JsonConvert.SerializeObject(entity);
-                        writer = new StreamWriter(path, true);
-                        writer.Write(contentsToWriteToFile);
-                        writer.Close();
+
                     }
                     else
                     {
-                        TextWriter writer = null;
-                        var contentsToWriteToFile = JsonConvert.SerializeObject(entity);
-                        writer = new StreamWriter(path, false);
-                        writer.Write(contentsToWriteToFile);
-                        writer.Close();
+
                     }
                 }
             }

@@ -32,12 +32,7 @@ namespace Pasword_Manager
 
             if (File.Exists(path))
             {
-                TextReader reader = null;
-                reader = new StreamReader(path);
-                var fileContents = reader.ReadToEnd();
-                var result = JsonConvert.DeserializeObject<Entity>(fileContents);
-                lbPreview.Items.Add(result);
-                reader.Close();
+
             }
             else
             {
