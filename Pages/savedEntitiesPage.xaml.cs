@@ -27,30 +27,22 @@ namespace Pasword_Manager
         {
             InitializeComponent();
 
-
             string path = Directory.GetCurrentDirectory();
             path += "\\entities.txt";
 
-
             if (File.Exists(path))
             {
-
-                string[] lines = File.ReadAllLines(path);
-                foreach (string line in lines)
-                {
-                    string[] col = line.Split(new char[] { ';' });
-                    lbPreview.Items.Add(col[0]);
-                }
-
-
+                TextReader reader = null;
+                reader = new StreamReader(path);
+                var fileContents = reader.ReadToEnd();
+                var result = JsonConvert.DeserializeObject<Entity>(fileContents);
+                lbPreview.Items.Add(result);
+                reader.Close();
             }
             else
             {
-                //            MessageBox 
+                MessageBox.Show("The file could not be loaded"); 
             }
-
         }
-
-
     }
 }

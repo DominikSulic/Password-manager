@@ -8,18 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="newEntitiyPage">
 
-    <Grid>
+    <Grid Margin="0,112,10,-84.4">
         <Label Content="Enter your user name" VerticalAlignment="Top" Margin="50,30,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="50,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="50,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
         <Label Content="Enter your password" VerticalAlignment="Top" Margin="50,249,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtPasswordBox" HorizontalAlignment="Left" Height="23" Margin="50,291,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <TextBox x:Name="txtPasswordBox" HorizontalAlignment="Left" Height="23" Margin="50,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
         <Label Content="Enter your e-mail address" VerticalAlignment="Top" Margin="50,177,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="47,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="47,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" RenderTransformOrigin="0.5,0.5"/>
 
         <Label Content="Enter the site name" VerticalAlignment="Top" Margin="50,106,550,0" Foreground="Cyan"/>
-        <TextBox x:Name="txtEntityName" HorizontalAlignment="Left" Height="23" Margin="50,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267"/>
+        <TextBox x:Name="txtEntityName" HorizontalAlignment="Left" Height="23" Margin="50,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
 
         <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Left" Margin="50,332,0,0" VerticalAlignment="Top" Width="121" Click="btnGeneratePassword_Click"/>

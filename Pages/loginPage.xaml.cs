@@ -66,7 +66,6 @@ namespace Pasword_Manager
                         MessageBox.Show("You didn't enter anything");
                     }
 
-
                 }
             }
         }

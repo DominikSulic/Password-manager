@@ -75,7 +75,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\newEntitiyPage.xaml">
+    <Page Include="Pages\newEntityPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,8 +98,8 @@
     <Compile Include="Pages\historyPage.xaml.cs">
       <DependentUpon>historyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\newEntitiyPage.xaml.cs">
-      <DependentUpon>newEntitiyPage.xaml</DependentUpon>
+    <Compile Include="Pages\newEntityPage.xaml.cs">
+      <DependentUpon>newEntityPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\optionsPage.xaml.cs">
       <DependentUpon>optionsPage.xaml</DependentUpon>

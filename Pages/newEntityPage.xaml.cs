@@ -79,23 +79,22 @@ namespace Pasword_Manager
                         email = txtEmail.Text
                     };
 
-                    string json = entity.userName + ", " + entity.entityName + ", " + entity.password + ", " + entity.email + ";";
 
                     if (File.Exists(path))
                     {
-                        using (StreamWriter file = new StreamWriter(path, append: true))
-                        {
-                            file.WriteLine(json);
-                            file.Close();
-                        }
+                        TextWriter writer = null;
+                        var contentsToWriteToFile = JsonConvert.SerializeObject(entity);
+                        writer = new StreamWriter(path, true);
+                        writer.Write(contentsToWriteToFile);
+                        writer.Close();
                     }
                     else
                     {
-                        using (StreamWriter file = new StreamWriter(path, append: true))
-                        {
-                            file.WriteLine(json);
-                            file.Close();
-                        }
+                        TextWriter writer = null;
+                        var contentsToWriteToFile = JsonConvert.SerializeObject(entity);
+                        writer = new StreamWriter(path, false);
+                        writer.Write(contentsToWriteToFile);
+                        writer.Close();
                     }
                 }
             }
@@ -106,5 +105,3 @@ namespace Pasword_Manager
         }
     }
 }
-
-
