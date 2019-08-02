@@ -22,6 +22,8 @@ namespace Pasword_Manager
     /// </summary>
     public partial class NewEntityPage : Page
     {
+        private Serialization serialize = new Serialization();
+        private Entity entity = new Entity();
         public NewEntityPage()
         {
             InitializeComponent();
@@ -68,26 +70,12 @@ namespace Pasword_Manager
                 }
                 else
                 {
-                    string path = Directory.GetCurrentDirectory();
-                    path += "\\entities.txt";
+                    entity.userName = txtUserName.Text;
+                    entity.entityName = txtEntityName.Text;
+                    entity.password = txtPasswordBox.Text;
+                    entity.email = txtEmail.Text;
 
-                    Entity entity = new Entity
-                    {
-                        userName = txtUserName.Text,
-                        entityName = txtEntityName.Text,
-                        password = txtPasswordBox.Text,
-                        email = txtEmail.Text
-                    };
-
-
-                    if (File.Exists(path))
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
+                    serialize.addEntity(entity.entityName, entity);
                 }
             }
             catch (CustomException ce)

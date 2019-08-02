@@ -27,17 +27,16 @@ namespace Pasword_Manager
         {
             InitializeComponent();
 
-            string path = Directory.GetCurrentDirectory();
-            path += "\\entities.txt";
+            List<Entity> list = new List<Entity>();
 
-            if (File.Exists(path))
+            Serialization serialize = new Serialization();
+            Dictionary<string, Entity> dick = serialize.Load();
+            foreach(var item in dick)
             {
+                list.Add(item.Value);
+            }
 
-            }
-            else
-            {
-                MessageBox.Show("The file could not be loaded"); 
-            }
+            lbPreview.ItemsSource = list;
         }
     }
 }

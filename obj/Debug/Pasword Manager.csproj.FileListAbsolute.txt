@@ -20,12 +20,10 @@ G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Newtonsoft.Json.xml
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csproj.CopyComplete
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\historyPage.g.cs
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\loginPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\newEntitiyPage.g.cs
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\optionsPage.g.cs
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\savedEntitiesPage.g.cs
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\historyPage.baml
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\loginPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\newEntitiyPage.baml
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\optionsPage.baml
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\savedEntitiesPage.baml
 C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe.config
@@ -57,3 +55,5 @@ C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCo
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.CopyComplete
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.exe
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.pdb
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\newEntityPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\newEntityPage.baml

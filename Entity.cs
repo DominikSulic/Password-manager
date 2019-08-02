@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Pasword_Manager
 {
-    class Entity
+    public class Entity
     {
         public string entityName;
         public string password;
         public string userName;
         public string email;
 
-        public List<Category> listOfCategories;
+        List<Category> listOfCategories;
 
 
 
