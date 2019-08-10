@@ -29,14 +29,8 @@ namespace Pasword_Manager
 
             List<Entity> list = new List<Entity>();
 
-            Serialization serialize = new Serialization();
-            Dictionary<string, Entity> dick = serialize.Load();
-            foreach(var item in dick)
-            {
-                list.Add(item.Value);
-            }
 
-            lbPreview.ItemsSource = list;
+            lbPreview.ItemsSource = Entity.readFromFile();
         }
     }
 }

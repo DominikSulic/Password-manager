@@ -57,3 +57,4 @@ C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.exe
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.pdb
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\newEntityPage.g.cs
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pages\newEntityPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csprojAssemblyReference.cache

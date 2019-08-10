@@ -67,7 +67,6 @@
     <Compile Include="Pages\savedEntitiesPage.xaml.cs">
       <DependentUpon>savedEntitiesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Serialization.cs" />
     <Page Include="Pages\historyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

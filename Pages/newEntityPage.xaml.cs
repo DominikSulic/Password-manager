@@ -22,7 +22,6 @@ namespace Pasword_Manager
     /// </summary>
     public partial class NewEntityPage : Page
     {
-        private Serialization serialize = new Serialization();
         private Entity entity = new Entity();
         public NewEntityPage()
         {
@@ -75,7 +74,7 @@ namespace Pasword_Manager
                     entity.password = txtPasswordBox.Text;
                     entity.email = txtEmail.Text;
 
-                    serialize.addEntity(entity.entityName, entity);
+                    Entity.saveToFile(entity);
                 }
             }
             catch (CustomException ce)

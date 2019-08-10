@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\
 Pasword_Manager
 none
 false
 DEBUG;TRACE
-G:\Visual Studio 2019\Projects\Pasword Manager\App.xaml
+C:\Users\Dominik\Desktop\PasswordManager\App.xaml
 7-485776800
 
-16-1622451845
-14-990366386
+151616774642
+14632237914
 Pages\historyPage.xaml;Pages\loginPage.xaml;Pages\newEntityPage.xaml;Pages\optionsPage.xaml;Pages\mainPage.xaml;MainWindow.xaml;Pages\savedEntitiesPage.xaml;
 
 True
