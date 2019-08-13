@@ -96,19 +96,31 @@ namespace Pasword_Manager
                 {
                     string content = File.ReadAllText(path, Encoding.UTF8);
                     string[] individualEntity = content.Split(';');
-                    string temp = "";
-                    string[] temp2 = new string[4];
+                    string data = "";
+                    string[] temp = { };
 
                     for (int i = 0; i < entitiesForDeletion.Length - 1; i++)
                     {
                         for(int i2 = 0; i < individualEntity.Length - 1; i++)
                         {
-                            if (individualEntity[i2].StartsWith(entitiesForDeletion[i]))
+                            temp = individualEntity[i2].Split(',');
+                            if (temp[0] == entitiesForDeletion[i])
                             {
                                 individualEntity[i2].Remove(0, individualEntity[i2].Length);
                             }
                         }
                     }
+
+                    File.WriteAllText(path, String.Empty);
+
+                    for(int i = 0; i < individualEntity.Length - 1; i++)
+                    {
+                        data += individualEntity[i] + ";";
+                    }
+
+                    MessageBox.Show(data);
+
+                    File.WriteAllText(path, data);
                 }
             }
             catch(Exception ex)

@@ -71,8 +71,16 @@ namespace Pasword_Manager
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete the selected entities?", "Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                string[] entitiesForDeletion = new string[list.Count];
                 int i = 0;
+
+                foreach (var selectedItem in lbEntities.SelectedItems)
+                {
+                    i++;
+                }
+
+                string[] entitiesForDeletion = new string[i];
+                i = 0;
+
                 foreach (var selectedItem in lbEntities.SelectedItems)
                 {
                     entitiesForDeletion[i] = selectedItem.ToString();
