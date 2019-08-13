@@ -19,7 +19,6 @@ namespace Pasword_Manager
 
         private static string path = Directory.GetCurrentDirectory() + "/entities.txt";
 
-
         public static void saveToFile(Entity entity)
         {
             try
@@ -27,7 +26,7 @@ namespace Pasword_Manager
                 if (!File.Exists(path))
                 {
                     FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write);
-                    string data = entity.entityName + ", " + entity.userName +  ", " + entity.email + ", " + entity.password + ";";
+                    string data = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
                     byte[] info = new UTF8Encoding(true).GetBytes(data);
                     fs.Write(info, 0, info.Length);
                     fs.Close();
@@ -36,7 +35,7 @@ namespace Pasword_Manager
                 else
                 {
                     FileStream fs = new FileStream(path, FileMode.Append, FileAccess.Write);
-                    string data = entity.userName + ", " + entity.entityName + ", " + entity.email + ", " + entity.password + ";";
+                    string data = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
                     byte[] info = new UTF8Encoding(true).GetBytes(data);
                     fs.Write(info, 0, info.Length);
                     fs.Close();
@@ -62,7 +61,7 @@ namespace Pasword_Manager
                     string temp = "";
                     string[] temp2 = new string[4];
 
-                    for(int i = 0; i < individualEntity.Length - 1; i++)
+                    for (int i = 0; i < individualEntity.Length - 1; i++)
                     {
                         temp = individualEntity[i];
                         temp2 = temp.Split(',');
@@ -88,7 +87,7 @@ namespace Pasword_Manager
             return listOfEntities;
         }
 
-        public static void deleteEntitiesFromFile(string[] entitiesForDeletion)
+        public static void deleteEntitiesFromFile(int[] indexesForDeletion)
         {
             try
             {
@@ -96,37 +95,35 @@ namespace Pasword_Manager
                 {
                     string content = File.ReadAllText(path, Encoding.UTF8);
                     string[] individualEntity = content.Split(';');
+                    List<string> list = new List<string>(individualEntity);
                     string data = "";
-                    string[] temp = { };
 
-                    for (int i = 0; i < entitiesForDeletion.Length - 1; i++)
+                    for (int i = 1; i <= indexesForDeletion.Length; i++)
                     {
-                        for(int i2 = 0; i < individualEntity.Length - 1; i++)
-                        {
-                            temp = individualEntity[i2].Split(',');
-                            if (temp[0] == entitiesForDeletion[i])
-                            {
-                                individualEntity[i2].Remove(0, individualEntity[i2].Length);
-                            }
-                        }
+                        list.RemoveAt(indexesForDeletion[i - 1]);
                     }
+
+                    individualEntity = list.ToArray();
 
                     File.WriteAllText(path, String.Empty);
 
-                    for(int i = 0; i < individualEntity.Length - 1; i++)
+                    for (int i = 0; i < individualEntity.Length - 1; i++)
                     {
                         data += individualEntity[i] + ";";
                     }
 
-                    MessageBox.Show(data);
-
                     File.WriteAllText(path, data);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public static void updateEntityInFile()
+        {
+
         }
 
         public override string ToString()

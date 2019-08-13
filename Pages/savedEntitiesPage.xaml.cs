@@ -78,16 +78,18 @@ namespace Pasword_Manager
                     i++;
                 }
 
-                string[] entitiesForDeletion = new string[i];
+                int[] indexesForDeletion = new int[i];
                 i = 0;
 
                 foreach (var selectedItem in lbEntities.SelectedItems)
                 {
-                    entitiesForDeletion[i] = selectedItem.ToString();
-                    i++;
+                    indexesForDeletion[i] = lbEntities.Items.IndexOf(selectedItem);
+                    i++; 
                 }
 
-                Entity.deleteEntitiesFromFile(entitiesForDeletion);
+
+                Entity.deleteEntitiesFromFile(indexesForDeletion);
+                
             }
             else if (dialogResult == DialogResult.No)
             {
