@@ -20,11 +20,11 @@ namespace Pasword_Manager
     /// </summary>
     public partial class mainPage : Page
     {
-
+        /*
         NewEntityPage newEntity = new NewEntityPage();
         optionsPage options = new optionsPage();
         historyPage history = new historyPage();
-        savedEntitiesPage savedEntities = new savedEntitiesPage();
+        savedEntitiesPage savedEntities = new savedEntitiesPage(); */
 
         public mainPage()
         {
@@ -35,22 +35,22 @@ namespace Pasword_Manager
 
         private void BtnNewEntity_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(newEntity);
+            this.NavigationService.Navigate(new NewEntityPage());
         }
 
         private void BtnHistory_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(history);
+            this.NavigationService.Navigate(new historyPage());
         }
 
         private void BtnSavedEntities_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(savedEntities);
+            this.NavigationService.Navigate(new savedEntitiesPage());
         }
 
         private void BtnOptions_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(options);
+            this.NavigationService.Navigate(new optionsPage());
         }
     }
 }

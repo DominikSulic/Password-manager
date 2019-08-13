@@ -10,8 +10,8 @@ namespace Pasword_Manager
 {
     public class Entity
     {
-        public string userName;
         public string entityName;
+        public string userName;
         public string email;
         public string password;
 
@@ -27,7 +27,7 @@ namespace Pasword_Manager
                 if (!File.Exists(path))
                 {
                     FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write);
-                    string data = entity.userName + ", " + entity.entityName + ", " + entity.email + ", " + entity.password + ";";
+                    string data = entity.entityName + ", " + entity.userName +  ", " + entity.email + ", " + entity.password + ";";
                     byte[] info = new UTF8Encoding(true).GetBytes(data);
                     fs.Write(info, 0, info.Length);
                     fs.Close();
@@ -67,8 +67,8 @@ namespace Pasword_Manager
                         temp = individualEntity[i];
                         temp2 = temp.Split(',');
                         Entity entity = new Entity();
-                        entity.userName = temp2[0];
-                        entity.entityName = temp2[1];
+                        entity.entityName = temp2[0];
+                        entity.userName = temp2[1];
                         entity.email = temp2[2];
                         entity.password = temp2[3];
                         listOfEntities.Add(entity);
@@ -86,6 +86,35 @@ namespace Pasword_Manager
             }
 
             return listOfEntities;
+        }
+
+        public static void deleteEntitiesFromFile(string[] entitiesForDeletion)
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    string content = File.ReadAllText(path, Encoding.UTF8);
+                    string[] individualEntity = content.Split(';');
+                    string temp = "";
+                    string[] temp2 = new string[4];
+
+                    for (int i = 0; i < entitiesForDeletion.Length - 1; i++)
+                    {
+                        for(int i2 = 0; i < individualEntity.Length - 1; i++)
+                        {
+                            if (individualEntity[i2].StartsWith(entitiesForDeletion[i]))
+                            {
+                                individualEntity[i2].Remove(0, individualEntity[i2].Length);
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public override string ToString()
