@@ -58,6 +58,9 @@
     </ApplicationDefinition>
     <Compile Include="Category.cs" />
     <Compile Include="CustomException.cs" />
+    <Compile Include="Pages\editEntityPage.xaml.cs">
+      <DependentUpon>editEntityPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entity.cs" />
     <Compile Include="Pages\loginPage.xaml.cs">
       <DependentUpon>loginPage.xaml</DependentUpon>
@@ -65,6 +68,10 @@
     <Compile Include="Pages\savedEntitiesPage.xaml.cs">
       <DependentUpon>savedEntitiesPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\editEntityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\historyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

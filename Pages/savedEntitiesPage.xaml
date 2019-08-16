@@ -10,8 +10,8 @@
 
     <Grid>
 
-        <ListBox x:Name="lbEntities" HorizontalAlignment="Left" Height="278" Margin="32,38,0,0" VerticalAlignment="Top" Width="328" SelectionChanged="LbEntities_SelectionChanged"/>
-        <ListBox x:Name="lbPreview" HorizontalAlignment="Left" Height="278" Margin="432,38,0,0" VerticalAlignment="Top" Width="332"/>
+        <ListBox x:Name="lbEntities" SelectionMode="multiple" HorizontalAlignment="Left" Height="278" Margin="32,38,0,0" VerticalAlignment="Top" Width="328" SelectionChanged="LbEntities_SelectionChanged"/>
+        <ListBox x:Name="lbPreview" SelectionMode="multiple" HorizontalAlignment="Left" Height="278" Margin="432,38,0,0" VerticalAlignment="Top" Width="332"/>
         <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="112,364,0,0" VerticalAlignment="Top" Width="178" Height="48" Click="BtnDelete_Click"/>
         <Button Name="btnAlter" Content="Alter" HorizontalAlignment="Left" Margin="504,364,0,0" VerticalAlignment="Top" Width="178" Height="48" Click="BtnAlter_Click"/>
 

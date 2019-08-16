@@ -1,0 +1,26 @@
+﻿<Page x:Class="Pasword_Manager.editEntityPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pasword_Manager"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="editEntityPage">
+
+    <Grid>
+
+        <Label Content="Enter your new user name" VerticalAlignment="Top" Margin="50,57,550,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtNewUserName" HorizontalAlignment="Left" Height="23" Margin="50,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+
+        <Label Content="Enter a new e-mail address" VerticalAlignment="Top" Margin="50,147,550,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtNewEmail" HorizontalAlignment="Left" Height="23" Margin="50,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+
+        <Label Content="Enter a new e-mail address" VerticalAlignment="Top" Margin="50,245,550,0" Foreground="Cyan" RenderTransformOrigin="0.471,1.578"></Label>
+        <TextBox x:Name="txtNewPassword" HorizontalAlignment="Left" Height="23" Margin="50,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+
+
+
+
+    </Grid>
+</Page>

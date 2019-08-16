@@ -48,9 +48,10 @@ namespace Pasword_Manager
             }
         }
 
-        public static List<Entity> readFromFile()
+        public static Dictionary<string, List<Entity>> readFromFile()
         {
-            List<Entity> listOfEntities = new List<Entity>();
+            Dictionary<string, List<Entity>> dictionary = new Dictionary<string, List<Entity>>();
+            List<Entity> tempList = new List<Entity>();
 
             try
             {
@@ -70,21 +71,31 @@ namespace Pasword_Manager
                         entity.userName = temp2[1];
                         entity.email = temp2[2];
                         entity.password = temp2[3];
-                        listOfEntities.Add(entity);
+
+
+                        if (!dictionary.ContainsKey(entity.entityName))
+                        {
+                            tempList.Add(entity);
+                            dictionary.Add(entity.entityName, tempList);
+                            tempList.Clear();
+                        }
+                        else
+                        {
+
+                        }
+
                     }
                 }
                 else
                 {
                     MessageBox.Show("The file does not exist!");
                 }
-
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
-            return listOfEntities;
+            return dictionary;
         }
 
         public static void deleteEntitiesFromFile(int[] indexesForDeletion)
@@ -128,7 +139,7 @@ namespace Pasword_Manager
 
         public override string ToString()
         {
-            string returnString = userName + ", " + entityName + ", " + email + ", " + password + ";";
+            string returnString = entityName;
             return returnString;
         }
 
