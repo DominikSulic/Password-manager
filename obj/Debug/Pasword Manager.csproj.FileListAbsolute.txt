@@ -1,30 +1,3 @@
-C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe.config
-C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe
-C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.pdb
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\historyPage.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\loginPage.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\newEntityPage.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\optionsPage.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\mainPage.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\MainWindow.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\savedEntitiesPage.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\App.g.cs
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.cache
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.lref
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\historyPage.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\loginPage.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\newEntityPage.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\optionsPage.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\mainPage.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\MainWindow.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\savedEntitiesPage.baml
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.g.resources
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword_Manager.Properties.Resources.resources
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.GenerateResource.cache
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.exe
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.pdb
-C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csprojAssemblyReference.cache
 G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Pasword Manager.exe.config
 G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Pasword Manager.exe
 G:\Visual Studio 2019\Projects\Pasword Manager\bin\Debug\Pasword Manager.pdb
@@ -79,3 +52,32 @@ G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword
 G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
 G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.exe
 G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.pdb
+C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe.config
+C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe
+C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.pdb
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csprojAssemblyReference.cache
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\editEntityPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\historyPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\loginPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\newEntityPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\optionsPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\mainPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\MainWindow.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\savedEntitiesPage.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\App.g.cs
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.cache
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.lref
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\editEntityPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\historyPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\loginPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\newEntityPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\optionsPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\mainPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\MainWindow.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pages\savedEntitiesPage.baml
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.g.resources
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword_Manager.Properties.Resources.resources
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.GenerateResource.cache
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.exe
+C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.pdb

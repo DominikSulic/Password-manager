@@ -23,8 +23,9 @@ namespace Pasword_Manager
     public partial class savedEntitiesPage : Page
     {
 
-        private Dictionary<string, List<Entity>> dictionary = new Dictionary<string, List<Entity>>();
+        private Dictionary<string, string> dictionary = new Dictionary<string, string>();
         private string[] listOfEntityNames;
+        private string[] listOfEntities;
 
         public savedEntitiesPage()
         {
@@ -35,11 +36,13 @@ namespace Pasword_Manager
 
             dictionary = Entity.readFromFile();
             listOfEntityNames = new string[dictionary.Count];
+            listOfEntities = new string[dictionary.Count];
             int i = 0;
 
-            foreach(KeyValuePair<string, List<Entity>> kvp in dictionary)
+            foreach (KeyValuePair<string, string> kvp in dictionary)
             {
                 listOfEntityNames[i] = kvp.Key;
+                listOfEntities[i] = kvp.Value;
                 i++;
             }
 
@@ -54,17 +57,28 @@ namespace Pasword_Manager
                 btnAlter.IsEnabled = true;
 
                 string entityName = lbEntities.SelectedItem.ToString();
-                List<Entity> list = new List<Entity>();
+                string entityData = "";
 
-                foreach (KeyValuePair<string, List<Entity>> item in dictionary)
+                string[] returns = new string[listOfEntities.Length];
+                int j = 0;
+                for(int i = 0; i <= listOfEntities.Length; i++)
                 {
-                    if (item.Key == entityName)
+                    string[] dataToDisplay = listOfEntities[i].Split(',');
+                    if(dataToDisplay[0] == entityName)
                     {
-                        list = item.Value;
+                        for(int k = 0; k < dataToDisplay.Length; k+=3)
+                        {
+                            entityData += "Username: " + dataToDisplay[k] + "\n";
+                            entityData += "E-mail: " + dataToDisplay[k + 1] + "\n";
+                            entityData += "Password: " + dataToDisplay[k + 2] + "\n";
+                        }
+                        returns[j] = entityData;
+                        j++;
                     }
                 }
-                lbPreview.ItemsSource = list;
-            }           
+
+                lbPreview.ItemsSource = returns;
+            }
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
@@ -85,10 +99,10 @@ namespace Pasword_Manager
                 foreach (object selectedItem in lbEntities.SelectedItems)
                 {
                     indexesForDeletion[i] = lbEntities.Items.IndexOf(selectedItem);
-                    i++; 
+                    i++;
                 }
 
-                Entity.deleteEntitiesFromFile(indexesForDeletion);  
+                Entity.deleteEntitiesFromFile(indexesForDeletion);
             }
 
         }

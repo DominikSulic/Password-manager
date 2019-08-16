@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Pasword_Manager
@@ -17,7 +15,11 @@ namespace Pasword_Manager
 
         List<Category> listOfCategories;
 
+
+
         private static string path = Directory.GetCurrentDirectory() + "/entities.txt";
+
+
 
         public static void saveToFile(Entity entity)
         {
@@ -25,20 +27,19 @@ namespace Pasword_Manager
             {
                 if (!File.Exists(path))
                 {
-                    FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write);
-                    string data = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
-                    byte[] info = new UTF8Encoding(true).GetBytes(data);
-                    fs.Write(info, 0, info.Length);
-                    fs.Close();
-
+                    FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                    string entityData = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
+                    byte[] convertedEntityData = new UTF8Encoding(true).GetBytes(entityData);
+                    fileStream.Write(convertedEntityData, 0, convertedEntityData.Length);
+                    fileStream.Close();
                 }
                 else
                 {
-                    FileStream fs = new FileStream(path, FileMode.Append, FileAccess.Write);
-                    string data = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
-                    byte[] info = new UTF8Encoding(true).GetBytes(data);
-                    fs.Write(info, 0, info.Length);
-                    fs.Close();
+                    FileStream fileStream = new FileStream(path, FileMode.Append, FileAccess.Write);
+                    string entityData = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
+                    byte[] convertedEntityData = new UTF8Encoding(true).GetBytes(entityData);
+                    fileStream.Write(convertedEntityData, 0, convertedEntityData.Length);
+                    fileStream.Close();
                 }
 
             }
@@ -48,42 +49,39 @@ namespace Pasword_Manager
             }
         }
 
-        public static Dictionary<string, List<Entity>> readFromFile()
+
+
+        public static Dictionary<string, string> readFromFile()
         {
-            Dictionary<string, List<Entity>> dictionary = new Dictionary<string, List<Entity>>();
-            List<Entity> tempList = new List<Entity>();
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
 
             try
             {
                 if (File.Exists(path))
                 {
-                    string content = File.ReadAllText(path, Encoding.UTF8);
-                    string[] individualEntity = content.Split(';');
-                    string temp = "";
-                    string[] temp2 = new string[4];
+                    string allDataFromFile = File.ReadAllText(path, Encoding.UTF8);
+                    string[] entities = allDataFromFile.Split(';');
+                    string[] individualEntity = new string[4];
+                    string entitiesOfSameKey = "";
+                    string entityValuesConcat = "";
 
-                    for (int i = 0; i < individualEntity.Length - 1; i++)
+                    for (int i = 0; i < entities.Length - 1; i++)
                     {
-                        temp = individualEntity[i];
-                        temp2 = temp.Split(',');
-                        Entity entity = new Entity();
-                        entity.entityName = temp2[0];
-                        entity.userName = temp2[1];
-                        entity.email = temp2[2];
-                        entity.password = temp2[3];
+                        individualEntity = entities[i].Split(',');
 
-
-                        if (!dictionary.ContainsKey(entity.entityName))
+                        if (dictionary.TryGetValue(individualEntity[0], out entitiesOfSameKey))
                         {
-                            tempList.Add(entity);
-                            dictionary.Add(entity.entityName, tempList);
-                            tempList.Clear();
+                            entityValuesConcat = individualEntity[0] + ", " + individualEntity[1] + ", " + individualEntity[2] + ", " + individualEntity[3] + ";";
+                            entitiesOfSameKey += entityValuesConcat;
+                            dictionary[individualEntity[0]] = entitiesOfSameKey;
+                            entityValuesConcat = "";
                         }
                         else
                         {
-
+                            entityValuesConcat = individualEntity[0] + ", " + individualEntity[1] + ", " + individualEntity[2] + ", " + individualEntity[3] + ";";
+                            dictionary.Add(individualEntity[0], entityValuesConcat);
+                            entityValuesConcat = "";
                         }
-
                     }
                 }
                 else
@@ -98,32 +96,33 @@ namespace Pasword_Manager
             return dictionary;
         }
 
+
         public static void deleteEntitiesFromFile(int[] indexesForDeletion)
         {
             try
             {
                 if (File.Exists(path))
                 {
-                    string content = File.ReadAllText(path, Encoding.UTF8);
-                    string[] individualEntity = content.Split(';');
-                    List<string> list = new List<string>(individualEntity);
-                    string data = "";
+                    string allDataFromFile = File.ReadAllText(path, Encoding.UTF8);
+                    string[] entities = allDataFromFile.Split(';');
+                    List<string> listOfEntities = new List<string>(entities);
+                    string entityValuesConcat = "";
 
                     for (int i = 1; i <= indexesForDeletion.Length; i++)
                     {
-                        list.RemoveAt(indexesForDeletion[i - 1]);
+                        listOfEntities.RemoveAt(indexesForDeletion[i - 1]);
                     }
 
-                    individualEntity = list.ToArray();
+                    entities = listOfEntities.ToArray();
 
                     File.WriteAllText(path, String.Empty);
 
-                    for (int i = 0; i < individualEntity.Length - 1; i++)
+                    for (int i = 0; i < entities.Length - 1; i++)
                     {
-                        data += individualEntity[i] + ";";
+                        entityValuesConcat += entities[i] + ";";
                     }
 
-                    File.WriteAllText(path, data);
+                    File.WriteAllText(path, entityValuesConcat);
                 }
             }
             catch (Exception ex)
