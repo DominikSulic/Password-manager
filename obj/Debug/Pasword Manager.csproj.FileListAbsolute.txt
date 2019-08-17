@@ -24,34 +24,6 @@ G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csproj.
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.exe
 G:\Visual Studio 2019\Projects\Pasword Manager\obj\Debug\Pasword Manager.pdb
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\bin\Debug\Pasword Manager.exe.config
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\bin\Debug\Pasword Manager.exe
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\bin\Debug\Pasword Manager.pdb
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\editEntityPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\historyPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\loginPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\newEntityPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\optionsPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\mainPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\MainWindow.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\savedEntitiesPage.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\App.g.cs
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.cache
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.lref
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\editEntityPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\historyPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\loginPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\newEntityPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\optionsPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\mainPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\MainWindow.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\savedEntitiesPage.baml
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.g.resources
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword_Manager.Properties.Resources.resources
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.csproj.GenerateResource.cache
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.exe
-G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.pdb
 C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe.config
 C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.exe
 C:\Users\Dominik\Desktop\PasswordManager\bin\Debug\Pasword Manager.pdb
@@ -81,3 +53,31 @@ C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.Genera
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.exe
 C:\Users\Dominik\Desktop\PasswordManager\obj\Debug\Pasword Manager.pdb
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\bin\Debug\Pasword Manager.exe.config
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\bin\Debug\Pasword Manager.exe
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\bin\Debug\Pasword Manager.pdb
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\editEntityPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\historyPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\loginPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\newEntityPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\optionsPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\mainPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\MainWindow.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\savedEntitiesPage.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\App.g.cs
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager_MarkupCompile.lref
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\editEntityPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\historyPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\loginPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\newEntityPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\optionsPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\mainPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\MainWindow.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pages\savedEntitiesPage.baml
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.g.resources
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword_Manager.Properties.Resources.resources
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.csproj.GenerateResource.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.csproj.CoreCompileInputs.cache
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.exe
+G:\Visual Studio 2019\Projects\Pasword Manager\PasswordManager\obj\Debug\Pasword Manager.pdb

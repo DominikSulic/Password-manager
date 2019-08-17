@@ -57,27 +57,32 @@ namespace Pasword_Manager
                 btnAlter.IsEnabled = true;
 
                 string entityName = lbEntities.SelectedItem.ToString();
-                string entityData = "";
+                string[] tempArray = { };
+                List<string> separatedBySemicolon = new List<string>();
 
-                string[] returns = new string[listOfEntities.Length];
-                int j = 0;
-                for(int i = 0; i <= listOfEntities.Length; i++)
+                for (int i = 0; i < listOfEntities.Length; i++)
                 {
-                    string[] dataToDisplay = listOfEntities[i].Split(',');
-                    if(dataToDisplay[0] == entityName)
+                    tempArray = listOfEntities[i].Split(';');
+                    foreach (string entity in tempArray)
                     {
-                        for(int k = 0; k < dataToDisplay.Length; k+=3)
-                        {
-                            entityData += "Username: " + dataToDisplay[k] + "\n";
-                            entityData += "E-mail: " + dataToDisplay[k + 1] + "\n";
-                            entityData += "Password: " + dataToDisplay[k + 2] + "\n";
-                        }
-                        returns[j] = entityData;
-                        j++;
+                        separatedBySemicolon.Add(entity);
                     }
                 }
 
-                lbPreview.ItemsSource = returns;
+                string[] separatedByComma = new string[separatedBySemicolon.Count() * 4];
+                string[] entityForDisplay = new string[separatedByComma.Length];
+
+                for (int i = 0; i < separatedBySemicolon.Count(); i++)
+                {
+                    tempArray = separatedBySemicolon[i].Split(',');
+                    if (tempArray[0] == entityName)
+                    {
+                        entityForDisplay[i] = "Username: " + tempArray[1] + "\n" + "E-mail: " + tempArray[2] +
+                            "\n" + "Password: " + tempArray[3] + "\n";
+                    }
+
+                }
+                lbPreview.ItemsSource = entityForDisplay;
             }
         }
 
