@@ -97,38 +97,10 @@ namespace Pasword_Manager
         }
 
 
-        public static void deleteEntitiesFromFile(int[] indexesForDeletion)
+        public static void deleteEntities(Dictionary<string, string> dictionary)
         {
-            try
-            {
-                if (File.Exists(path))
-                {
-                    string allDataFromFile = File.ReadAllText(path, Encoding.UTF8);
-                    string[] entities = allDataFromFile.Split(';');
-                    List<string> listOfEntities = new List<string>(entities);
-                    string entityValuesConcat = "";
+           
 
-                    for (int i = 1; i <= indexesForDeletion.Length; i++)
-                    {
-                        listOfEntities.RemoveAt(indexesForDeletion[i - 1]);
-                    }
-
-                    entities = listOfEntities.ToArray();
-
-                    File.WriteAllText(path, String.Empty);
-
-                    for (int i = 0; i < entities.Length - 1; i++)
-                    {
-                        entityValuesConcat += entities[i] + ";";
-                    }
-
-                    File.WriteAllText(path, entityValuesConcat);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
         }
 
         public static void updateEntityInFile()

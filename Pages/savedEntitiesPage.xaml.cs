@@ -91,25 +91,64 @@ namespace Pasword_Manager
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete the selected entities?", "Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                int i = 0;
+                int numberOfSelectedEntities = 0;
+                int numberOfSelectedInstances = 0;
 
-                foreach (object selectedItem in lbEntities.SelectedItems)
+                string temp = "";
+                string eMail = "";
+
+                foreach(object selectedInstance in lbPreview.SelectedItems)
                 {
-                    i++;
+                    numberOfSelectedInstances++;
                 }
 
-                int[] indexesForDeletion = new int[i];
-                i = 0;
+                string[] tempArray = new string[3];
 
-                foreach (object selectedItem in lbEntities.SelectedItems)
+                if(numberOfSelectedInstances == 0)
                 {
-                    indexesForDeletion[i] = lbEntities.Items.IndexOf(selectedItem);
-                    i++;
+                    foreach (object selectedItem in lbEntities.SelectedItems)
+                    {
+                        dictionary.Remove(selectedItem.ToString());
+                    }
+                    Entity.deleteEntities(dictionary);
                 }
+                else
+                {
+                    foreach (object selectedInstance in lbPreview.SelectedItems)
+                    {
+                        temp = selectedInstance.ToString();
+                        tempArray = temp.Split('\n');
+                        eMail = tempArray[1];
+                        eMail = eMail.Substring(10, eMail.Length - 10);
 
-                Entity.deleteEntitiesFromFile(indexesForDeletion);
+                        dictionary.TryGetValue(lbEntities.SelectedItem.ToString(), out string dictionaryValueOnKey);
+                        string[] temp2 = dictionaryValueOnKey.Split(';');
+                        string[] temp3 = new string[temp2.Length];
+                        int j = 0;
+                        string result = "";
+
+                        for(int i = 0; i < temp2.Length-1; i++)
+                        {
+                            if (!temp2[i].Contains(eMail))
+                            {
+                                temp3[j] = temp2[i];
+                                j++;
+                            }
+                        }
+
+                        for(int i = 0; i < temp3.Length - 1; i++)
+                        {
+                            result += temp3[i];
+                        }
+
+                        dictionary[lbEntities.SelectedItem.ToString()] = result;
+                     // Dictionary<string, string> dibager = dictionary;
+                    }
+
+
+                }
+         
             }
-
         }
 
         private void BtnAlter_Click(object sender, RoutedEventArgs e)
