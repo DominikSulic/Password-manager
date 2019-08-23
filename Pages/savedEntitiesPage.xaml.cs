@@ -131,7 +131,7 @@ namespace Pasword_Manager
                         {
                             if (!temp2[i].Contains(eMail))
                             {
-                                temp3[j] = temp2[i];
+                                temp3[j] = temp2[i] + ";";
                                 j++;
                             }
                         }
@@ -142,12 +142,10 @@ namespace Pasword_Manager
                         }
 
                         dictionary[lbEntities.SelectedItem.ToString()] = result;
-                     // Dictionary<string, string> dibager = dictionary;
+                        Entity.deleteEntities(dictionary);
+                        this.NavigationService.Navigate(new savedEntitiesPage());
                     }
-
-
                 }
-         
             }
         }
 

@@ -99,7 +99,17 @@ namespace Pasword_Manager
 
         public static void deleteEntities(Dictionary<string, string> dictionary)
         {
-           
+            string saveToFile = "";
+
+            foreach(KeyValuePair<string, string> kvp in dictionary)
+            {
+                saveToFile += kvp.Value;
+            }
+
+            using (StreamWriter newTask = new StreamWriter(path, false))
+            {
+                newTask.WriteLine(saveToFile);
+            }
 
         }
 
