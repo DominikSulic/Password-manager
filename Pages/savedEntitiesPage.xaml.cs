@@ -22,7 +22,6 @@ namespace Pasword_Manager
     /// </summary>
     public partial class savedEntitiesPage : Page
     {
-
         private Dictionary<string, string> dictionary = new Dictionary<string, string>();
         private string[] listOfEntityNames;
         private string[] listOfEntities;
@@ -47,6 +46,11 @@ namespace Pasword_Manager
             }
 
             lbEntities.ItemsSource = listOfEntityNames;
+        }
+
+        public savedEntitiesPage(string username, string eMail, string password)
+        {
+
         }
 
         private void LbEntities_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -91,7 +95,6 @@ namespace Pasword_Manager
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete the selected entities?", "Delete", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                int numberOfSelectedEntities = 0;
                 int numberOfSelectedInstances = 0;
 
                 string temp = "";
@@ -151,10 +154,25 @@ namespace Pasword_Manager
 
         private void BtnAlter_Click(object sender, RoutedEventArgs e)
         {
+            string[] tempArray = new string[3];
+            string entityToAlter = lbPreview.SelectedItem.ToString();
+            tempArray = entityToAlter.Split('\n');
 
-            NavigationService.Navigate(new editEntityPage());
+            string username = tempArray[0];
+            string eMail = tempArray[1];
+            string password = tempArray[2];
+            string entityName = lbEntities.SelectedItem.ToString();
+
+            username = username.Substring(12, username.Length - 12);
+            eMail = eMail.Substring(10, eMail.Length - 10);
+            password = password.Substring(12, password.Length - 12);
+            
+
+            NavigationService.Navigate(new editEntityPage(entityName, username, eMail, password, dictionary));
 
 
+
+            //this.NavigationService.Navigate(new savedEntitiesPage());
         }
     }
 }

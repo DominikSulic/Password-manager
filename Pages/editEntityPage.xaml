@@ -10,15 +10,16 @@
 
     <Grid>
 
-        <Label Content="Enter your new user name" VerticalAlignment="Top" Margin="50,57,550,0" Foreground="Cyan"></Label>
+        <Label Content="Enter your new username" VerticalAlignment="Top" Margin="50,57,550,0" Foreground="Cyan"></Label>
         <TextBox x:Name="txtNewUserName" HorizontalAlignment="Left" Height="23" Margin="50,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
         <Label Content="Enter a new e-mail address" VerticalAlignment="Top" Margin="50,147,550,0" Foreground="Cyan"></Label>
         <TextBox x:Name="txtNewEmail" HorizontalAlignment="Left" Height="23" Margin="50,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
-        <Label Content="Enter a new e-mail address" VerticalAlignment="Top" Margin="50,245,550,0" Foreground="Cyan" RenderTransformOrigin="0.471,1.578"></Label>
+        <Label Content="Enter a new password" VerticalAlignment="Top" Margin="50,245,550,0" Foreground="Cyan" RenderTransformOrigin="0.471,1.578"></Label>
         <TextBox x:Name="txtNewPassword" HorizontalAlignment="Left" Height="23" Margin="50,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
+        <Button x:Name="btnSaveChanges" Content="Save" HorizontalAlignment="Left" Margin="347,296,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.093,0.1" Click="btnSaveChanges_Click"/>
 
 
 
