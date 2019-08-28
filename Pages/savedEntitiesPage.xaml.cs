@@ -26,6 +26,7 @@ namespace Pasword_Manager
         private string[] listOfEntityNames;
         private string[] listOfEntities;
 
+
         public savedEntitiesPage()
         {
             InitializeComponent();
@@ -48,10 +49,6 @@ namespace Pasword_Manager
             lbEntities.ItemsSource = listOfEntityNames;
         }
 
-        public savedEntitiesPage(string username, string eMail, string password)
-        {
-
-        }
 
         private void LbEntities_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -61,7 +58,7 @@ namespace Pasword_Manager
                 btnAlter.IsEnabled = true;
 
                 string entityName = lbEntities.SelectedItem.ToString();
-                string[] tempArray = { };
+                string[] tempArray = { }; 
                 List<string> separatedBySemicolon = new List<string>();
 
                 for (int i = 0; i < listOfEntities.Length; i++)
@@ -84,11 +81,12 @@ namespace Pasword_Manager
                         entityForDisplay[i] = "Username: " + tempArray[1] + "\n" + "E-mail: " + tempArray[2] +
                             "\n" + "Password: " + tempArray[3] + "\n";
                     }
-
                 }
-                lbPreview.ItemsSource = entityForDisplay;
+
+                lbPreview.ItemsSource = shortenTheArray(entityForDisplay);
             }
         }
+
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
@@ -152,6 +150,7 @@ namespace Pasword_Manager
             }
         }
 
+
         private void BtnAlter_Click(object sender, RoutedEventArgs e)
         {
             string[] tempArray = new string[3];
@@ -169,10 +168,37 @@ namespace Pasword_Manager
             
 
             NavigationService.Navigate(new editEntityPage(entityName, username, eMail, password, dictionary));
-
-
-
-            //this.NavigationService.Navigate(new savedEntitiesPage());
         }
+
+
+        private static string[] shortenTheArray(string[] arrayToBeShortened)
+        {
+            string[] shortenedArray;
+            int j = 0;
+    
+            for(int i = 0; i < arrayToBeShortened.Length - 1; i++)
+            {
+                if(arrayToBeShortened[i] != null)
+                {
+                    j++;
+                }
+            }
+
+            shortenedArray = new string[j];
+            j = 0;
+
+            for (int i = 0; i < arrayToBeShortened.Length - 1; i++)
+            {
+                if (arrayToBeShortened[i] != null)
+                {
+                    shortenedArray[j] = arrayToBeShortened[i];
+                    j++;
+                }
+            }
+
+            return shortenedArray;
+        }
+
+
     }
 }

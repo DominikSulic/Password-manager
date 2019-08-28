@@ -13,12 +13,8 @@ namespace Pasword_Manager
         public string email;
         public string password;
 
-        List<Category> listOfCategories;
 
-
-
-        private static string path = Directory.GetCurrentDirectory() + "/entities.txt";
-
+        private static readonly string path = Directory.GetCurrentDirectory() + "/entities.txt";
 
 
         public static void saveToFile(Entity entity)
@@ -48,7 +44,6 @@ namespace Pasword_Manager
                 throw ex;
             }
         }
-
 
 
         public static Dictionary<string, string> readFromFile()
@@ -112,6 +107,7 @@ namespace Pasword_Manager
             }
         }
 
+
         public static void updateEntityInFile(Dictionary<string, string> dictionary)
         {
             string saveToFile = "";
@@ -127,11 +123,13 @@ namespace Pasword_Manager
             }
         }
 
+
         public override string ToString()
         {
             string returnString = entityName;
             return returnString;
         }
+
 
     }
 }
