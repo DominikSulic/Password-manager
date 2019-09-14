@@ -7,24 +7,30 @@
       mc:Ignorable="d" d:DesignWidth="800"
       Title="newEntitiyPage" Height="450.945">
 
-    <Grid Margin="0,112,10,-84.4">
-        <Label Content="Enter your user name" VerticalAlignment="Top" Margin="50,17,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="50,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
 
-        <Label Content="Enter your password" VerticalAlignment="Top" Margin="50,236,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtPasswordBox" HorizontalAlignment="Left" Height="23" Margin="50,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+    <Grid>
 
-        <Label Content="Enter your e-mail address" VerticalAlignment="Top" Margin="50,164,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="47,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Enter the site name"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,600,250" Foreground="Cyan"/>
+        <TextBox x:Name="txtEntityName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,500,200" TextWrapping="Wrap" Width="267"/>
 
-        <Label Content="Enter the site name" VerticalAlignment="Top" Margin="50,93,550,0" Foreground="Cyan"/>
-        <TextBox x:Name="txtEntityName" HorizontalAlignment="Left" Height="23" Margin="50,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Enter your user name"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,600,100" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,500,50" TextWrapping="Wrap"  Width="267"/>
+
+        <Label Content="Enter your e-mail address"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,600,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtEmail"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,100,500,0" TextWrapping="Wrap" Width="267"/>
+
+        <Label Content="Enter your password"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,600,0" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtPasswordBox"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,250,500,0" TextWrapping="Wrap" Width="267"/>
+
+        <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Margin="0,250,00,0" Click="btnGeneratePassword_Click"/>
+        <Button x:Name="btnSaveEntity" Content="Save an Entity"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="128" Height="34" Margin="0,350,400,0" Click="btnSaveEntity_Click"/>
 
 
-        <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Left" Margin="50,319,0,0" VerticalAlignment="Top" Width="121" Click="btnGeneratePassword_Click"/>
-        <Button x:Name="btnSaveEntity" Content="Save an Entity" HorizontalAlignment="Left" Margin="189,365,0,0" VerticalAlignment="Top" Width="128" Height="34" Click="btnSaveEntity_Click"/>
 
-        <ListBox HorizontalAlignment="Left" Height="208" Margin="414,191,0,0" VerticalAlignment="Top" Width="353"/>
+
+
+        <Button Content="Back" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400" />
+
 
     </Grid>
 </Page>

@@ -9,10 +9,18 @@
       Title="loginPage">
 
     <Grid>
-        <Label Content="ENTER MASTER PASSWORD" FontSize="20" Foreground="Aquamarine" HorizontalAlignment="Left" Margin="233,96,0,0" VerticalAlignment="Top" Height="59" Width="268"/>
-        <TextBox x:Name="txtMasterPasswordInput" HorizontalAlignment="Left" Height="49" Margin="294,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192"/>
-       
-        <Button x:Name="btnLogIn" Content="Log in" HorizontalAlignment="Left" Margin="347,296,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.093,0.1" Click="btnLogIn_Click"/>
+
+
+        <Image Source="/Pictures/logo.png" Width="400" Margin="200,25,200,255"/>
+        <TextBox x:Name="txtMasterPasswordInput" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" FontSize="40" TextWrapping="Wrap"  Width="192"/>
+
+
+        <Button Name="btnLogIn" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="auto" Margin="0,170,0,0" Click="btnLogIn_Click">
+            <StackPanel>
+                <Image Source ="C:\Users\shini\Desktop\Pictures\pic.png"/>
+            </StackPanel>
+        </Button>
+
 
 
     </Grid>

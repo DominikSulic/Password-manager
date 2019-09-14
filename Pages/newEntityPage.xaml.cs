@@ -81,5 +81,10 @@ namespace Pasword_Manager
                 MessageBox.Show(ce.exceptionText);
             }
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new mainPage());
+        }
     }
 }

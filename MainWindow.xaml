@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pasword_Manager"
         mc:Ignorable="d"
-        Title="Password Manager" Height="900" Width="1600" Background="DarkSlateBlue">
+        Title="Password Manager" Height="700" Width="1200" MinHeight="600" MinWidth="800" >
 
-    <Grid>
-        <Frame Name="mainFrame" Content="Frame" HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="1400"/>
+
+    <Grid >
+        <Image HorizontalAlignment="Center" Height="auto" VerticalAlignment="Center" Width="auto" Source="/Pictures/background.png" Stretch="Fill"/>
+
+        <Frame Name="mainFrame" Content="Frame" HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="1400" Source="MainWindow.xaml" NavigationUIVisibility="Hidden" />
 
 
     </Grid>

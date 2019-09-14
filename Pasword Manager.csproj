@@ -72,10 +72,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\historyPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\loginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,9 +95,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Pages\historyPage.xaml.cs">
-      <DependentUpon>historyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\newEntityPage.xaml.cs">
       <DependentUpon>newEntityPage.xaml</DependentUpon>
@@ -146,6 +139,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\background.png" />
+    <Resource Include="Pictures\login.png" />
+    <Resource Include="Pictures\logo.png" />
+    <Resource Include="Pictures\pic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

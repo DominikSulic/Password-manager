@@ -38,11 +38,6 @@ namespace Pasword_Manager
             this.NavigationService.Navigate(new NewEntityPage());
         }
 
-        private void BtnHistory_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new historyPage());
-        }
-
         private void BtnSavedEntities_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new savedEntitiesPage());
@@ -51,6 +46,12 @@ namespace Pasword_Manager
         private void BtnOptions_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new optionsPage());
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new mainPage());
+
         }
     }
 }
