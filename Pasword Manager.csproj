@@ -56,8 +56,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Category.cs" />
     <Compile Include="CustomException.cs" />
+    <Compile Include="Encryption.cs" />
     <Compile Include="Pages\editEntityPage.xaml.cs">
       <DependentUpon>editEntityPage.xaml</DependentUpon>
     </Compile>

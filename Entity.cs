@@ -23,21 +23,34 @@ namespace Pasword_Manager
             {
                 if (!File.Exists(path))
                 {
-                    FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                    string entityData = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
-                    byte[] convertedEntityData = new UTF8Encoding(true).GetBytes(entityData);
-                    fileStream.Write(convertedEntityData, 0, convertedEntityData.Length);
-                    fileStream.Close();
+                    string saveToFile = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
+
+                    // path is the only specified variable, the boolean value wont have any effect, the file doesnt exist
+                    using (StreamWriter newTask = new StreamWriter(path))
+                    {
+                        newTask.WriteLine(Encryption.Encrypt(saveToFile, "HungryForApples?"));
+                    }
                 }
                 else
                 {
-                    FileStream fileStream = new FileStream(path, FileMode.Append, FileAccess.Write);
-                    string entityData = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
-                    byte[] convertedEntityData = new UTF8Encoding(true).GetBytes(entityData);
-                    fileStream.Write(convertedEntityData, 0, convertedEntityData.Length);
-                    fileStream.Close();
-                }
+                    if (!checkEntityNameEmailMatch(entity.entityName, entity.email))
+                    {
+                        string saveToFile = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
+                        string allDataFromFile = Encryption.Decrypt(File.ReadAllText(path), "HungryForApples?");
 
+                        allDataFromFile += saveToFile;
+
+                        // add the boolean now, it's regarding the append - false - overwrites the file
+                        using (StreamWriter newTask = new StreamWriter(path, false))
+                        {
+                            newTask.WriteLine(Encryption.Encrypt(allDataFromFile, "HungryForApples?"));
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("That Email address already exists for that entity");
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -55,6 +68,7 @@ namespace Pasword_Manager
                 if (File.Exists(path))
                 {
                     string allDataFromFile = File.ReadAllText(path, Encoding.UTF8);
+                    allDataFromFile = Encryption.Decrypt(allDataFromFile, "HungryForApples?");
                     string[] entities = allDataFromFile.Split(';');
                     string[] individualEntity = new string[4];
                     string entitiesOfSameKey = "";
@@ -88,6 +102,7 @@ namespace Pasword_Manager
             {
                 throw ex;
             }
+
             return dictionary;
         }
 
@@ -96,14 +111,15 @@ namespace Pasword_Manager
         {
             string saveToFile = "";
 
-            foreach(KeyValuePair<string, string> kvp in dictionary)
+            foreach (KeyValuePair<string, string> kvp in dictionary)
             {
                 saveToFile += kvp.Value;
             }
 
+            // add the boolean now, it's regarding the append - false - overwrites the file
             using (StreamWriter newTask = new StreamWriter(path, false))
             {
-                newTask.WriteLine(saveToFile);
+                newTask.WriteLine(Encryption.Encrypt(saveToFile, "HungryForApples?"));
             }
         }
 
@@ -117,10 +133,29 @@ namespace Pasword_Manager
                 saveToFile += kvp.Value;
             }
 
+            // add the boolean now, it's regarding the append - false - overwrites the file
             using (StreamWriter newTask = new StreamWriter(path, false))
             {
-                newTask.WriteLine(saveToFile);
+                newTask.WriteLine(Encryption.Encrypt(saveToFile, "HungryForApples?"));
             }
+        }
+
+        //could do this for the username too, i guess?
+        public static bool checkEntityNameEmailMatch(string entityName, string eMail)
+        {
+            string allDataFromFile = Encryption.Decrypt(File.ReadAllText(path), "HungryForApples?");
+            string[] separatedBySemicolon = allDataFromFile.Split(';');
+            bool combinationExists = false;
+
+            for (int i = 0; i < separatedBySemicolon.Length - 1; i++)
+            {
+                if (separatedBySemicolon[i].Contains(entityName) && separatedBySemicolon[i].Contains(eMail))
+                {
+                    combinationExists = true;
+                }
+            }
+
+            return combinationExists;
         }
 
 

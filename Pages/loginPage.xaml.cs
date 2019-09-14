@@ -25,7 +25,6 @@ namespace Pasword_Manager
         public loginPage()
         {
             InitializeComponent();
-
         }
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
@@ -36,11 +35,9 @@ namespace Pasword_Manager
             if (File.Exists(path))
             {
                 string[] masterPasswordCheck = File.ReadAllLines(path);
-                if (txtMasterPasswordInput.Text == masterPasswordCheck[0])
+                if (txtMasterPasswordInput.Text == Encryption.Decrypt(masterPasswordCheck[0], "HungryForApples?"))
                 {
-                    MessageBox.Show("Access Granted!");
-
-                    this.NavigationService.Navigate(new mainPage());
+                    NavigationService.Navigate(new mainPage());
                 }
                 else
                 {
@@ -49,23 +46,20 @@ namespace Pasword_Manager
             }
             else
             {
-                using (StreamWriter file = new StreamWriter(path))
+                if (txtMasterPasswordInput.Text != "" && ((from c in txtMasterPasswordInput.Text where c != ' ' select c).Count() != 0))
                 {
-
-                    if (txtMasterPasswordInput.Text != "")
+                    using (StreamWriter file = new StreamWriter(path))
                     {
-                        file.WriteLine(txtMasterPasswordInput.Text);
+                        file.WriteLine(Encryption.Encrypt(txtMasterPasswordInput.Text, "HungryForApples?"));
                         file.Close();
-                        MessageBox.Show("New Password Saved");
+                        MessageBox.Show("New Password Saved!");
 
-                        this.NavigationService.Navigate(new mainPage());
-
+                        NavigationService.Navigate(new mainPage());
                     }
-                    else
-                    {
-                        MessageBox.Show("You didn't enter anything");
-                    }
-
+                }
+                else
+                {
+                    MessageBox.Show("You didn't enter anything");
                 }
             }
         }

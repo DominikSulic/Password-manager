@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Pasword_Manager
 {
@@ -47,30 +48,37 @@ namespace Pasword_Manager
 
         private void btnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
-            string username = txtNewUserName.Text;
-            string eMail = txtNewEmail.Text;
-            string password = txtNewPassword.Text;
-            string dictionaryValueOnKey = "";
-
-            dictionary.TryGetValue(entityName, out dictionaryValueOnKey);
-
-            string[] temp2 = dictionaryValueOnKey.Split(';');
-            string saveToDictionary = "";
-
-            for (int i = 0; i < temp2.Length - 1; i++)
+            if (!Entity.checkEntityNameEmailMatch(this.entityName, txtNewEmail.Text))
             {
-                if (temp2[i].Contains(this.eMail))
+                string username = txtNewUserName.Text;
+                string eMail = txtNewEmail.Text;
+                string password = txtNewPassword.Text;
+                string dictionaryValueOnKey = "";
+
+                dictionary.TryGetValue(entityName, out dictionaryValueOnKey);
+
+                string[] temp2 = dictionaryValueOnKey.Split(';');
+                string saveToDictionary = "";
+
+                for (int i = 0; i < temp2.Length - 1; i++)
                 {
-                    temp2[i] = this.entityName + ", " + username + ", " + eMail + ", " + password;
+                    if (temp2[i].Contains(this.eMail))
+                    {
+                        temp2[i] = this.entityName + ", " + username + ", " + eMail + ", " + password;
+                    }
+                    saveToDictionary += temp2[i] + ";";
                 }
-                saveToDictionary += temp2[i] + ";";
+
+                dictionary[this.entityName] = saveToDictionary;
+
+                Entity.updateEntityInFile(dictionary);
+
+                this.NavigationService.Navigate(new savedEntitiesPage());
             }
-
-            dictionary[this.entityName] = saveToDictionary;
-
-            Entity.updateEntityInFile(dictionary);
-
-            this.NavigationService.Navigate(new savedEntitiesPage());
+            else
+            {
+                MessageBox.Show("That Email address already exists for that entity");
+            }
         }
     }
 }
