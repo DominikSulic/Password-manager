@@ -9,19 +9,18 @@
       Title="editEntityPage">
 
     <Grid>
+        <Label Content="Enter your new username" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,200" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtNewUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,150" TextWrapping="Wrap" Width="267"/>
 
-        <Label Content="Enter your new username" VerticalAlignment="Top" Margin="50,57,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtNewUserName" HorizontalAlignment="Left" Height="23" Margin="50,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Enter a new e-mail address" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" Foreground="Cyan"></Label>
+        <TextBox x:Name="txtNewEmail" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,0" TextWrapping="Wrap" Width="267"/>
 
-        <Label Content="Enter a new e-mail address" VerticalAlignment="Top" Margin="50,147,550,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtNewEmail" HorizontalAlignment="Left" Height="23" Margin="50,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Enter a new password" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" Foreground="Cyan" RenderTransformOrigin="0.471,1.578"></Label>
+        <TextBox x:Name="txtNewPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,150,0,0" TextWrapping="Wrap" Width="267"/>
 
-        <Label Content="Enter a new password" VerticalAlignment="Top" Margin="50,245,550,0" Foreground="Cyan" RenderTransformOrigin="0.471,1.578"></Label>
-        <TextBox x:Name="txtNewPassword" HorizontalAlignment="Left" Height="23" Margin="50,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267"/>
+        <Button x:Name="btnSaveChanges" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,250,0,0" Width="75" RenderTransformOrigin="1.093,0.1" Click="btnSaveChanges_Click"/>
 
-        <Button x:Name="btnSaveChanges" Content="Save" HorizontalAlignment="Left" Margin="347,296,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.093,0.1" Click="btnSaveChanges_Click"/>
-
-        <Button Content="Back" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400" />
+        <Button Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400" />
 
 
     </Grid>

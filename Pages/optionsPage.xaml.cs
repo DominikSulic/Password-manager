@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+using System.IO;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Pasword_Manager
 {
@@ -20,9 +11,55 @@ namespace Pasword_Manager
     /// </summary>
     public partial class optionsPage : Page
     {
+        private string path = Directory.GetCurrentDirectory() + "/options.txt";
+
+
         public optionsPage()
         {
             InitializeComponent();
+        }
+
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new mainPage());
+        }
+
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            int broj;
+            if (!File.Exists(path))
+            {
+                if (int.TryParse(txtNumberOfCharacters.Text, out broj))
+                {
+                    using (StreamWriter newTask = new StreamWriter(path))
+                    {
+                        newTask.WriteLine(Encryption.Encrypt(broj.ToString(), "HungryForApples?"));
+                    }
+                    txtNumberOfCharacters.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("You did not enter a value of type 'integer'");
+                }
+
+            }
+            else
+            {
+                if (int.TryParse(txtNumberOfCharacters.Text, out broj))
+                {
+                    using (StreamWriter newTask = new StreamWriter(path, false))
+                    {
+                        newTask.WriteLine(Encryption.Encrypt(broj.ToString(), "HungryForApples?"));
+                    }
+                    txtNumberOfCharacters.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("You did not enter a value of type 'integer'");
+                }
+            }
         }
     }
 }

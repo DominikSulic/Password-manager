@@ -33,23 +33,17 @@ namespace Pasword_Manager
                 }
                 else
                 {
-                    if (!checkEntityNameEmailMatch(entity.entityName, entity.email))
-                    {
-                        string saveToFile = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
-                        string allDataFromFile = Encryption.Decrypt(File.ReadAllText(path), "HungryForApples?");
+                    string saveToFile = entity.entityName + ", " + entity.userName + ", " + entity.email + ", " + entity.password + ";";
+                    string allDataFromFile = Encryption.Decrypt(File.ReadAllText(path), "HungryForApples?");
 
-                        allDataFromFile += saveToFile;
+                    allDataFromFile += saveToFile;
 
-                        // add the boolean now, it's regarding the append - false - overwrites the file
-                        using (StreamWriter newTask = new StreamWriter(path, false))
-                        {
-                            newTask.WriteLine(Encryption.Encrypt(allDataFromFile, "HungryForApples?"));
-                        }
-                    }
-                    else
+                    // add the boolean now, it's regarding the append - false - overwrites the file
+                    using (StreamWriter newTask = new StreamWriter(path, false))
                     {
-                        MessageBox.Show("That Email address already exists for that entity");
+                        newTask.WriteLine(Encryption.Encrypt(allDataFromFile, "HungryForApples?"));
                     }
+
                 }
             }
             catch (Exception ex)
@@ -138,24 +132,6 @@ namespace Pasword_Manager
             {
                 newTask.WriteLine(Encryption.Encrypt(saveToFile, "HungryForApples?"));
             }
-        }
-
-        //could do this for the username too, i guess?
-        public static bool checkEntityNameEmailMatch(string entityName, string eMail)
-        {
-            string allDataFromFile = Encryption.Decrypt(File.ReadAllText(path), "HungryForApples?");
-            string[] separatedBySemicolon = allDataFromFile.Split(';');
-            bool combinationExists = false;
-
-            for (int i = 0; i < separatedBySemicolon.Length - 1; i++)
-            {
-                if (separatedBySemicolon[i].Contains(entityName) && separatedBySemicolon[i].Contains(eMail))
-                {
-                    combinationExists = true;
-                }
-            }
-
-            return combinationExists;
         }
 
 

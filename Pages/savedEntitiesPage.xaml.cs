@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Forms;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Pasword_Manager
 {
@@ -46,7 +36,9 @@ namespace Pasword_Manager
                 i++;
             }
 
-            lbEntities.ItemsSource = listOfEntityNames;
+            var list = dictionary.Keys.ToList();
+            list.Sort();
+            lbEntities.ItemsSource = list;
         }
 
 
@@ -58,7 +50,7 @@ namespace Pasword_Manager
                 btnAlter.IsEnabled = true;
 
                 string entityName = lbEntities.SelectedItem.ToString();
-                string[] tempArray = { }; 
+                string[] tempArray = { };
                 List<string> separatedBySemicolon = new List<string>();
 
                 for (int i = 0; i < listOfEntities.Length; i++)
@@ -98,14 +90,14 @@ namespace Pasword_Manager
                 string temp = "";
                 string eMail = "";
 
-                foreach(object selectedInstance in lbPreview.SelectedItems)
+                foreach (object selectedInstance in lbPreview.SelectedItems)
                 {
                     numberOfSelectedInstances++;
                 }
 
                 string[] tempArray = new string[3];
 
-                if(numberOfSelectedInstances == 0)
+                if (numberOfSelectedInstances == 0)
                 {
                     foreach (object selectedItem in lbEntities.SelectedItems)
                     {
@@ -128,7 +120,7 @@ namespace Pasword_Manager
                         int j = 0;
                         string result = "";
 
-                        for(int i = 0; i < temp2.Length-1; i++)
+                        for (int i = 0; i < temp2.Length - 1; i++)
                         {
                             if (!temp2[i].Contains(eMail))
                             {
@@ -137,7 +129,7 @@ namespace Pasword_Manager
                             }
                         }
 
-                        for(int i = 0; i < temp3.Length - 1; i++)
+                        for (int i = 0; i < temp3.Length - 1; i++)
                         {
                             result += temp3[i];
                         }
@@ -153,21 +145,28 @@ namespace Pasword_Manager
 
         private void BtnAlter_Click(object sender, RoutedEventArgs e)
         {
-            string[] tempArray = new string[3];
-            string entityToAlter = lbPreview.SelectedItem.ToString();
-            tempArray = entityToAlter.Split('\n');
+            if (lbPreview.SelectedIndex != -1 && lbPreview.SelectedItems.Count == 1)
+            {
+                string[] tempArray = new string[3];
+                string entityToAlter = lbPreview.SelectedItem.ToString();
+                tempArray = entityToAlter.Split('\n');
 
-            string username = tempArray[0];
-            string eMail = tempArray[1];
-            string password = tempArray[2];
-            string entityName = lbEntities.SelectedItem.ToString();
+                string username = tempArray[0];
+                string eMail = tempArray[1];
+                string password = tempArray[2];
+                string entityName = lbEntities.SelectedItem.ToString();
 
-            username = username.Substring(12, username.Length - 12);
-            eMail = eMail.Substring(10, eMail.Length - 10);
-            password = password.Substring(12, password.Length - 12);
-            
+                username = username.Substring(12, username.Length - 12);
+                eMail = eMail.Substring(10, eMail.Length - 10);
+                password = password.Substring(12, password.Length - 12);
 
-            NavigationService.Navigate(new editEntityPage(entityName, username, eMail, password, dictionary));
+
+                NavigationService.Navigate(new editEntityPage(entityName, username, eMail, password, dictionary));
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("You didnt select anything or you selected multiple entities.");
+            }
         }
 
 
@@ -175,10 +174,10 @@ namespace Pasword_Manager
         {
             string[] shortenedArray;
             int j = 0;
-    
-            for(int i = 0; i < arrayToBeShortened.Length - 1; i++)
+
+            for (int i = 0; i < arrayToBeShortened.Length - 1; i++)
             {
-                if(arrayToBeShortened[i] != null)
+                if (arrayToBeShortened[i] != null)
                 {
                     j++;
                 }

@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
+using System.Linq;
+
 
 namespace Pasword_Manager
 {
@@ -48,43 +38,57 @@ namespace Pasword_Manager
 
         private void btnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
-            if (!Entity.checkEntityNameEmailMatch(this.entityName, txtNewEmail.Text))
+            try
             {
-                string username = txtNewUserName.Text;
-                string eMail = txtNewEmail.Text;
-                string password = txtNewPassword.Text;
-                string dictionaryValueOnKey = "";
-
-                dictionary.TryGetValue(entityName, out dictionaryValueOnKey);
-
-                string[] temp2 = dictionaryValueOnKey.Split(';');
-                string saveToDictionary = "";
-
-                for (int i = 0; i < temp2.Length - 1; i++)
+                if (txtNewUserName.Text == "" || (from c in txtNewUserName.Text where c != ' ' select c).Count() == 0)
                 {
-                    if (temp2[i].Contains(this.eMail))
-                    {
-                        temp2[i] = this.entityName + ", " + username + ", " + eMail + ", " + password;
-                    }
-                    saveToDictionary += temp2[i] + ";";
+                    throw new CustomException("You need to enter a username");
                 }
+                else if (txtNewEmail.Text == "" || (from c in txtNewEmail.Text where c != ' ' select c).Count() == 0)
+                {
+                    throw new CustomException("You need to enter an e-mail address");
+                }
+                else if (txtNewPassword.Text == "" || (from c in txtNewPassword.Text where c != ' ' select c).Count() == 0)
+                {
+                    throw new CustomException("You need to enter a password");
+                }
+                else
+                {
+                    string username = txtNewUserName.Text;
+                    string eMail = txtNewEmail.Text;
+                    string password = txtNewPassword.Text;
+                    string dictionaryValueOnKey = "";
 
-                dictionary[this.entityName] = saveToDictionary;
+                    dictionary.TryGetValue(entityName, out dictionaryValueOnKey);
 
-                Entity.updateEntityInFile(dictionary);
+                    string[] temp2 = dictionaryValueOnKey.Split(';');
+                    string saveToDictionary = "";
 
-                this.NavigationService.Navigate(new savedEntitiesPage());
+                    for (int i = 0; i < temp2.Length - 1; i++)
+                    {
+                        if (temp2[i].Contains(this.eMail))
+                        {
+                            temp2[i] = this.entityName + ", " + username + ", " + eMail + ", " + password;
+                        }
+                        saveToDictionary += temp2[i] + ";";
+                    }
+
+                    dictionary[this.entityName] = saveToDictionary;
+
+                    Entity.updateEntityInFile(dictionary);
+
+                    this.NavigationService.Navigate(new savedEntitiesPage());
+                }
             }
-            else
+            catch (CustomException ce)
             {
-                MessageBox.Show("That Email address already exists for that entity");
+                MessageBox.Show(ce.exceptionText);
             }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new mainPage());
-
         }
     }
 }

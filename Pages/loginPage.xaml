@@ -9,15 +9,13 @@
       Title="loginPage">
 
     <Grid>
-
-
         <Image Source="/Pictures/logo.png" Width="400" Margin="200,25,200,255"/>
         <TextBox x:Name="txtMasterPasswordInput" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" FontSize="40" TextWrapping="Wrap"  Width="192"/>
 
 
         <Button Name="btnLogIn" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="auto" Margin="0,170,0,0" Click="btnLogIn_Click">
             <StackPanel>
-                <Image Source ="C:\Users\shini\Desktop\Pictures\pic.png"/>
+                <Image Source ="/Pictures/login.png"/>
             </StackPanel>
         </Button>
 
