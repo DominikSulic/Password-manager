@@ -10,26 +10,26 @@
 
     <Grid>
 
-        <Label Content="Enter the site name"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,200" Foreground="Cyan"/>
-        <TextBox x:Name="txtEntityName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,150" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Enter the site name"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,200" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"/>
+        <TextBox x:Name="txtEntityName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Margin="0,0,0,150" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Label Content="Enter your user name"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,0" TextWrapping="Wrap"  Width="267"/>
+        <Label Content="Enter your user name"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"></Label>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Margin="0,0,0,0" TextWrapping="Wrap"  Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Label Content="Enter your e-mail address"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtEmail"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,150,0,0" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Enter your e-mail address"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"></Label>
+        <TextBox x:Name="txtEmail"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Margin="0,150,0,0" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Label Content="Enter your password"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,250,0,0" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtPasswordBox"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,300,0,0" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Enter your password"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,250,0,0" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"></Label>
+        <TextBox x:Name="txtPasswordBox"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Margin="0,300,0,0" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Margin="400,300,0,0" Click="btnGeneratePassword_Click"/>
-        <Button x:Name="btnSaveEntity" Content="Save the Entity"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="128" Height="34" Margin="336,409,336,0" Click="btnSaveEntity_Click"/>
-
-
+        <Button x:Name="btnGeneratePassword" Content="Generate a Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="25"  Margin="400,300,0,0" Click="btnGeneratePassword_Click"   Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"/>
+        <Button x:Name="btnSaveEntity" Content="Save the Entity"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="128" Height="34" Margin="336,409,336,0" Click="btnSaveEntity_Click"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"/>
 
 
 
-        <Button Content="Back" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400" />
+
+
+        <Button Content="Back" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica" />
 
 
     </Grid>

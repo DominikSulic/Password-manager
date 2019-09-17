@@ -9,10 +9,10 @@
       Title="optionsPage">
 
     <Grid>
-        <Label Content="Set the number of characters that are automatically generated for the password:" VerticalAlignment="Center" Margin="0,0,0,50" HorizontalAlignment="Center" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtNumberOfCharacters" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Set the number of characters that are automatically generated for the password:" VerticalAlignment="Center" Margin="0,0,0,100" HorizontalAlignment="Center" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"></Label>
+        <TextBox x:Name="txtNumberOfCharacters" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="20"/>
 
-        <Button Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400"/>
-        <Button Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnSave_Click" Margin="0,50,0,0"/>
+        <Button Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"/>
+        <Button Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnSave_Click" Margin="0,50,0,0"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"/>
     </Grid>
 </Page>

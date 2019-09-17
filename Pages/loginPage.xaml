@@ -9,15 +9,12 @@
       Title="loginPage">
 
     <Grid>
-        <Image Source="/Pictures/logo.png" Width="400" Margin="200,25,200,255"/>
+        <Image Source="/Pictures/logo.png" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,25,200,255"/>
         <TextBox x:Name="txtMasterPasswordInput" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" FontSize="40" TextWrapping="Wrap"  Width="192"/>
 
 
-        <Button Name="btnLogIn" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="auto" Margin="0,170,0,0" Click="btnLogIn_Click">
-            <StackPanel>
-                <Image Source ="/Pictures/login.png"/>
-            </StackPanel>
-        </Button>
+        <Button Name="btnLogIn" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Login"  Width="150" Height="40" Margin="0,170,0,0" Click="btnLogIn_Click" Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica" FontSize="25"/>
+
 
 
 

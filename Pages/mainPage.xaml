@@ -9,9 +9,9 @@
       Title="mainPage">
 
     <Grid>
-        <Button x:Name="btnNewEntity" Content="Add New Entity" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="75" Click="BtnNewEntity_Click"></Button>
-        <Button x:Name="btnOptions" Content="Options" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="74"  Click="BtnOptions_Click" Margin="500,0,0,0"></Button>
-        <Button x:Name="btnSavedEntities" Content="Saved Entities" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="74"  Click="BtnSavedEntities_Click" Margin="0,0,500,0"></Button>
+        <Button x:Name="btnNewEntity" Content="ADD NEW" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="75" Click="BtnNewEntity_Click" FontSize="18"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"></Button>
+        <Button x:Name="btnOptions" Content="OPTIONS" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="74"  Click="BtnOptions_Click" Margin="500,0,0,0" FontSize="18"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"></Button>
+        <Button x:Name="btnSavedEntities" Content="SAVED ENTITIES" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="74"  Click="BtnSavedEntities_Click" Margin="0,0,500,0" FontSize="18"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"></Button>
 
     </Grid>
 </Page>

@@ -9,18 +9,18 @@
       Title="editEntityPage">
 
     <Grid>
-        <Label Content="Enter your new username" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,200" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtNewUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,150" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Enter your new username" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,200" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"></Label>
+        <TextBox x:Name="txtNewUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,150" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Label Content="Enter a new e-mail address" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" Foreground="Cyan"></Label>
-        <TextBox x:Name="txtNewEmail" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,0" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Enter a new e-mail address" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17"></Label>
+        <TextBox x:Name="txtNewEmail" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,0,0,0" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Label Content="Enter a new password" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" Foreground="Cyan" RenderTransformOrigin="0.471,1.578"></Label>
-        <TextBox x:Name="txtNewPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,150,0,0" TextWrapping="Wrap" Width="267"/>
+        <Label Content="Enter a new password" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="17" ></Label>
+        <TextBox x:Name="txtNewPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="0,150,0,0" TextWrapping="Wrap" Width="267" Background="DimGray" Foreground="White" FontStyle="Normal" FontFamily="Helvetica" FontSize="18"/>
 
-        <Button x:Name="btnSaveChanges" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,250,0,0" Width="75" RenderTransformOrigin="1.093,0.1" Click="btnSaveChanges_Click"/>
+        <Button x:Name="btnSaveChanges" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,250,0,0" Width="75" Click="btnSaveChanges_Click"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"/>
 
-        <Button Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400" />
+        <Button Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="btnBack_Click" Margin="0,0,700,400"  Foreground="GhostWhite" Background="SlateGray" FontFamily="Helvetica"/>
 
 
     </Grid>
